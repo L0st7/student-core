@@ -5,6 +5,16 @@
 	<groupId>com.fis.lab</groupId>
 	<artifactId>student-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<repositories>
+		<repository>
+			<id>parent-demo-mvn-repo</id>
+			<url>https://raw.github.com/L0st7/*/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 	<properties>
 		<github.global.server>github</github.global.server>
 		<java.version>1.8</java.version>
