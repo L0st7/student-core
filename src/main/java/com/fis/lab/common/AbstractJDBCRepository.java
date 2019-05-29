@@ -146,12 +146,8 @@ public abstract class AbstractJDBCRepository<T> {
 					preparedStatement = connection.prepareStatement(query);
 					preparedStatement.setObject(1, field.get(object));
 					preparedStatement.execute();
-				} catch (SQLException e) {
+				} catch (SQLException | IllegalArgumentException | IllegalAccessException e) {
 					e.printStackTrace();
-				} catch(IllegalArgumentException e2) {
-					e2.printStackTrace();
-				} catch(IllegalAccessException e3) {
-					e3.printStackTrace();
 				}
 			}
 		}
@@ -295,12 +291,8 @@ public abstract class AbstractJDBCRepository<T> {
 					n++;
 				}
 			}
-		}catch (SQLException e) {
-			e.printStackTrace();
-		} catch(IllegalArgumentException e2) {
-			e2.printStackTrace();
-		} catch(IllegalAccessException e3) {
-			e3.printStackTrace();
+		}catch (IllegalArgumentException| IllegalAccessException | SQLException e1) {
+			e1.printStackTrace();
 		}
 		return preparedStatement;
 	}
@@ -328,12 +320,8 @@ public abstract class AbstractJDBCRepository<T> {
 					n++;
 				}
 			}
-		}catch (SQLException e) {
-			e.printStackTrace();
-		} catch(IllegalArgumentException e2) {
-			e2.printStackTrace();
-		} catch(IllegalAccessException e3) {
-			e3.printStackTrace();
+		}catch (IllegalArgumentException| IllegalAccessException | SQLException e1) {
+			e1.printStackTrace();
 		}
 		return preparedStatement;
 	}
