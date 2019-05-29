@@ -30,7 +30,7 @@ public class DataSourceFactory {
 	
 	private Properties loadProperties() {
 		try {
-			FileInputStream fileInputStream = new FileInputStream("src/main/resources/configdb.properties");
+			FileInputStream fileInputStream = new FileInputStream("resources/configdb.properties");
 			properties.load(fileInputStream);
 		} catch (IOException e) {
 			e.printStackTrace();
